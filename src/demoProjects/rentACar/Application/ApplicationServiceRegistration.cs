@@ -1,35 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Application.Features.Brands.Rules;
-using MediatR;
-using Microsoft.Extensions.DependencyInjection;
+﻿namespace Application;
 
-namespace Application
+
+public static class ApplicationServiceRegistration
 {
-
-    public static class ApplicationServiceRegistration
+    public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
-        {
 
-            services.AddAutoMapper(Assembly.GetExecutingAssembly());
-            services.AddMediatR(Assembly.GetExecutingAssembly());
+        services.AddAutoMapper(Assembly.GetExecutingAssembly());
+        services.AddMediatR(Assembly.GetExecutingAssembly());
 
-            services.AddScoped<BrandBusinnesRules>();
+        services.AddScoped<BrandBusinnesRules>();
 
-            //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-            //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));
-            //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehavior<,>));
-            //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CacheRemovingBehavior<,>));
-            //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
-            //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
+        //services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+        //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));
+        //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CachingBehavior<,>));
+        //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(CacheRemovingBehavior<,>));
+        //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
+        //services.AddTransient(typeof(IPipelineBehavior<,>), typeof(RequestValidationBehavior<,>));
 
-            return services;
+        return services;
 
-        }
     }
 }
