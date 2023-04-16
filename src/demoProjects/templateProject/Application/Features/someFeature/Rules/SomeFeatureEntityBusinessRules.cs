@@ -22,7 +22,7 @@ namespace Application.Features.someFeature.Rules
         public async Task SomeFeatureEntityNameCanNotBeDuplicatedWhenInserted(string name)
         {
             IPaginate<SomeFeatureEntity> result = await _someFeatureEntityRepository.GetListAsync(b => b.Name == name);
-            if (result.Items.Any()) throw new BusinessE xception("SomeFeatureEntity name exists.");
+            if (result.Items.Any()) throw new BusinessException("SomeFeatureEntity name exists.");
         }
     }
 }

@@ -1,7 +1,5 @@
-﻿using Application.Features.Brands.Commands.CreateBrand;
-using Application.Features.Brands.Dtos;
+﻿
 using AutoMapper;
-using Domain.Entities;
 
 namespace Application.Features.Brands.Profiles
 {
@@ -11,6 +9,7 @@ namespace Application.Features.Brands.Profiles
         {
             CreateMap<Brand, CreatedBrandDto>().ReverseMap();
             CreateMap<Brand, CreateBrandCommand>().ReverseMap();
+            CreateMap<IPaginate<BrandListDto>,BrandListModel>().ReverseMap();
         }
     }
 }
