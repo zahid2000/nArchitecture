@@ -9,3 +9,8 @@ global using Core.Application.Requests;
 global using Application.Features.Brands.Commands.CreateBrand;
 global using Application.Features.Brands.Dtos;
 global using Application.Features.Brands.Models;
+global using Application.Services.Respositories;
+global using Core.CrossCuttingConcerns.Exceptions;
+global using AutoMapper;
+global using FluentValidation;
+

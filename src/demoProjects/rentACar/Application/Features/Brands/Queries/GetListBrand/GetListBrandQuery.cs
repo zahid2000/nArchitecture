@@ -1,8 +1,4 @@
-﻿using Application.Features.Brands.Models;
-using Application.Services.Respositories;
-using AutoMapper;
-
-namespace Application.Features.Brands.Queries.GetListBrand;
+﻿namespace Application.Features.Brands.Queries.GetListBrand;
 
 public class GetListBrandQuery:IRequest<BrandListModel>
 {

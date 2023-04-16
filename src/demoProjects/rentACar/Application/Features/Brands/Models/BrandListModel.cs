@@ -1,7 +1,4 @@
-﻿using Application.Features.Brands.Dtos;
-
-
-namespace Application.Features.Brands.Models;
+﻿namespace Application.Features.Brands.Models;
 
 public class BrandListModel:BasePageableModel
 {
