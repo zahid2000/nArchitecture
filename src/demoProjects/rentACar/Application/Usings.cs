@@ -13,4 +13,6 @@ global using Application.Services.Respositories;
 global using Core.CrossCuttingConcerns.Exceptions;
 global using AutoMapper;
 global using FluentValidation;
+global using Application.Features.Models.Dtos;
+
 

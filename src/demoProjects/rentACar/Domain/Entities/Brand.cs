@@ -10,6 +10,6 @@ public class Brand:Entity
         Name = name;
     }
     public string? Name { get; set; }
+    public virtual ICollection<Model> Models { get; set; }
 
-   
 }
